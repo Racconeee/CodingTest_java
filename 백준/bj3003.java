@@ -40,7 +40,8 @@ public class bj3003 {
             else if(arr[i] > arr2[i]){
                 // arr2[i]++;
                 n++;
-                count++;
+                count++; 
+                
                 
                 System.out.println(count);
             }
