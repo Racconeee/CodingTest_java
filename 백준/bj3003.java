@@ -17,41 +17,11 @@ public class bj3003 {
         for (int i = 0; i < arr2.length; i++) {
             arr2[i] = Integer.parseInt(st.nextToken());
         }
-        // br.close();
+        int n =0;
+        for( int i =0; i< arr2.length; i++){
+            n = arr[i] - arr2[i];
 
-        
-        // System.out.println(Arrays.toString(arr2));
-
-        
-        int i = 0;
-        int n = 0;
-        int count = 0;
-        while(true){
-            // System.out.println(arr[i] +","+ arr2[i]);
-            n = arr2[i];
-            if(arr[i] == arr2[i]){
-                if(i == arr2.length-1){
-                    break;
-                }
-                System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
-                i++;
-                System.out.println(count);
-            }
-            else if(arr[i] > arr2[i]){
-                // arr2[i]++;
-                n++;
-                count++; 
-                
-                
-                System.out.println(count);
-            }
-            else if(arr[i] < arr2[i]){
-                // arr2[i]--;
-                n--;
-                count--;
-                System.out.println(count);
-            }
-            arr2[i] = n;
+            System.out.print(n + " ");
         }
     }
 }
