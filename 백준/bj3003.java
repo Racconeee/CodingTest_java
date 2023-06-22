@@ -20,7 +20,6 @@ public class bj3003 {
         int n =0;
         for( int i =0; i< arr2.length; i++){
             n = arr[i] - arr2[i];
-
             System.out.print(n + " ");
         }
     }
