@@ -6,25 +6,30 @@ import java.nio.Buffer;
 
 public class BaekJoon_1316 {
     public static void main(String[] args) throws IOException{
+
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
         String[] str = new String[n];
-        String[] st;
+        int count = n;
         
-        for (int i = 0; i < n; i++) {
-            str[i] = br.readLine();
+        for (int j = 0; j < n; j++) {
+            str[j] = br.readLine();
+            for (int i = 0; i < str[j].length(); i++) {
+
+                System.out.println(str[j].charAt(i));
+                if(str[j].indexOf(str[j].charAt(i)) != -1) {
+                    n--;
+                    System.out.println("zzzzz");
+                }
+            }
         }
-        for (int i = 0; i < str.length; i++) {
-            if(str.contains(str[i]))
-        }
+        System.out.println(count);
 
 
 
 
-
-        System.out.println(str);
 
     }
 }
