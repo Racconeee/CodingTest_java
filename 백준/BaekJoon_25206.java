@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//너의 평점은
 public class BaekJoon_25206 {
     public static void main(String[] args) throws IOException {
         
