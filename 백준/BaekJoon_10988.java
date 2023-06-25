@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+//팰린드롬인지 확인하기
 public class BaekJoon_10988 {
     public static void main(String[] args) {
+        //스캐너를 활용
         Scanner sc = new Scanner(System.in);
 
         String str = sc.nextLine();
