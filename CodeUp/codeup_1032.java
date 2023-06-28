@@ -6,8 +6,8 @@ public class codeup_1032 {
 
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        String str = sc.next();
 
-        System.out.println(Integer.toString(n,16));
+        System.out.println(Integer.parseInt(str,8));
     }
 }
