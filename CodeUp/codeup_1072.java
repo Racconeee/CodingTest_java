@@ -9,7 +9,7 @@ public class codeup_1072 {
 
         for (int i = 0; i < n; i++) {
             int a = sc.nextInt();
-            System.out.println(a);
+            System.out.println(""+a);
         }
     }
 }
