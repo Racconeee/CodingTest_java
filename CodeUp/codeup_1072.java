@@ -6,7 +6,6 @@ public class codeup_1072 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-
         for (int i = 0; i < n; i++) {
             int a = sc.nextInt();
             System.out.println(""+a);
