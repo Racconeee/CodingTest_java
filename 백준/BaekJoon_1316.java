@@ -10,24 +10,12 @@ public class BaekJoon_1316 {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = Integer.parseInt(br.readLine());
-        String[] str = new String[n];
-        int count = n;
+        String str = br.readLine();
+        boolean[] arr = new boolean[26];
         
-        for (int j = 0; j < n; j++) {
-            str[j] = br.readLine();
-            for (int i = 0; i < str[j].length(); i++) {
-
-                System.out.println(str[j].charAt(i));
-                if(str[j].indexOf(str[j].charAt(i)) != -1) {
-                    n--;
-                    System.out.println("zzzzz");
-                }
-            }
+        for (int i = 0; i < arr.length; i++) {
+            
         }
-        System.out.println(count);
-
-
 
 
 
