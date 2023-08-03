@@ -13,6 +13,7 @@ public class BaekJoon_1316 {
         String str = br.readLine();
         boolean[] arr = new boolean[26];
         
+        
         for (int i = 0; i < arr.length; i++) {
             
         }
