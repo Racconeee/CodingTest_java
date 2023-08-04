@@ -10,11 +10,13 @@ public class BaekJoon_1316 {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        
         String str = br.readLine();
         boolean[] arr = new boolean[26];
         
-        
+
         for (int i = 0; i < arr.length; i++) {
+            
             
         }
     }
