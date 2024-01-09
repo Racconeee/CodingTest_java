@@ -10,6 +10,7 @@ public class BaekJoon_2743 {
 		String s = br.readLine();
 
 		System.out.println(s.length());
+		
 
 	}
 }
