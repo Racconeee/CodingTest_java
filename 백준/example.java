@@ -1,36 +1,31 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class example {
     public static void main(String[] args) throws IOException {
         
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
-        int n = Integer.parseInt(br.readLine()); 
-        int[] array = new int[n];
-        int index = 1;
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < n; i++) {
-            array[i] = Integer.parseInt(br.readLine()); 
+        int[] n = {1,1,3,3,0,1,1};
+
+        System.out.println(Arrays.toString(n));
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(n[0]);
+        for (int i = 1; i < n.length; i++) {
+            if(n[i-1] != n[i]){
+                queue.add(n[i]);
+            }
+        }
+        System.out.println();
+        System.out.println(queue);
+        int[] answer = new int[queue.size()];
+        int index = 0;
+        while (queue.size() >= 1) {
+            System.out.println("1");
+            answer[index++] = queue.poll();
         }
 
-        for (int i = 0; i < array.length; i++) {
-            if(array[i] >= index){
-                while (array[i] > index) {
-                    stack.push(index++);
-                    sb.append("+\n");
-                }
-                stack.pop();
-                sb.append("-\n");
-            }else{
-                int out = stack.pop();
-                if(out > array[i]){
-                    System.out.println("NO");
-                    sb.append("-\n");
-                }
-            }
-        }    
+        System.out.println(Arrays.toString(answer));
     }
 }
