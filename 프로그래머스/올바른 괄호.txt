@@ -1,0 +1,26 @@
+import java.util.Stack;
+
+class Solution {
+    boolean solution(String s) {
+        
+        Stack<Character> stack = new Stack<>();
+
+        int A = 0;
+        int B = 0;
+        for (int i = 0; i < s.length(); i++) {
+            stack.push(s.charAt(i));
+            if(stack.peek() == '('){
+                A++;
+            }else{
+                B++;
+            }
+            if(A < B){
+                return false;
+            }
+        }
+        if ( A == B && stack.peek() == ')'){
+            return true;
+        }
+        return false;
+    }
+}
