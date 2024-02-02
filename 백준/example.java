@@ -9,27 +9,25 @@ import java.util.Stack;
 public class example {
     public static void main(String[] args){
 
-        int[] priorities = {2,1,3,2};
-        int location = 2;
-        int answer = 0;
-        PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
+        int[] prices = {1,2,3,2,3};
 
-        for (int n : priorities) {
-            queue.offer(n);
-        }
-        while (!queue.isEmpty()) {
-            for (int i = 0; i < priorities.length; i++) {
-                if(queue.peek() == priorities[i]){
-                    queue.poll();
-                    answer++;
-                    if(i == location){
-                        // return answer;
-                        System.out.println(answer);
-                    }
+        Stack<Integer> stack = new Stack<>();
+        
+
+        for (int i = 0; i < prices.length-2; i++) {
+            int count = 0;
+            System.out.println(c);
+            while (true) {
+                if(prices[i+count] < prices[i+count+1]){
+                    count++;
+                }else{
+                    count++;
+                    stack.push(count);
+                    System.out.println(count);
+                    break;
                 }
             }
         }
-        System.out.println(answer);
-        // return answer;
+        System.out.println(stack);
     }
 }
