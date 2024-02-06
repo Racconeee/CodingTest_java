@@ -1,33 +1,24 @@
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.Stack;
 
 public class example {
     public static void main(String[] args){
-
-        int[] prices = {1,2,3,2,3};
-
-        Stack<Integer> stack = new Stack<>();
-        
-
-        for (int i = 0; i < prices.length-2; i++) {
-            int count = 0;
-            System.out.println(c);
-            while (true) {
-                if(prices[i+count] < prices[i+count+1]){
-                    count++;
-                }else{
-                    count++;
-                    stack.push(count);
-                    System.out.println(count);
-                    break;
+            int[] prices = {1,2,3,2,3};
+            int[] answer = new int[prices.length];
+            Stack<Integer[]> stack = new Stack<>();
+            
+            for(int i = 0; i < prices.length; i++){
+                answer[i] = answer.length - 1 - i; // 최대기간으로 세팅
+                Integer[] arr = {i, prices[i]}; // 인덱스, 가격
+                
+                while(!stack.empty() && stack.peek()[1] > prices[i]){ // 가격이 떨어진 경우
+                    Integer[] price = stack.pop();
+                    answer[price[0]] = i - price[0];
                 }
+                System.out.println("Stack: " + Arrays.deepToString(stack.toArray()));
+                stack.push(arr);
             }
-        }
-        System.out.println(stack);
-    }
+            
+            System.out.println(Arrays.toString(answer));
+}
 }
