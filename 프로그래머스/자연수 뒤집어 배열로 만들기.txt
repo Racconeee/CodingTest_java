@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+public class code{
+    
+
+    public static void main(String[] args) {
+    
+
+        int n = 12345;
+        
+        String str = String.valueOf(n);
+
+        char[] char_arr = new char[str.length()];
+        int[] arr = new int[str.length()];
+
+        char_arr = str.toCharArray();
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[char_arr.length-i-1] = Integer.parseInt(String.valueOf(char_arr[i]));
+        }
+ 
+        System.out.println(Arrays.toString(arr));
+        
+    }
+
+
+}

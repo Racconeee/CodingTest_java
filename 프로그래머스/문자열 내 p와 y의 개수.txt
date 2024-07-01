@@ -1,0 +1,32 @@
+public class code{
+    
+
+    public static void main(String[] args) {
+    
+        String s = "pyPy";
+        s = s.toUpperCase();
+
+        int point_p = 0 , point_y = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            System.out.println(i);
+            if(s.charAt(i) == 'P'){
+                point_p++;
+            }
+            
+            if(s.charAt(i) == 'Y'){
+                point_y++;
+            }
+        }
+        if(point_p == point_y){
+            // return true;
+            System.out.println("true");
+        }
+        // return false;
+        System.out.println("false");
+        System.out.println(point_p);
+        System.out.println(point_y);
+    }
+
+
+}
